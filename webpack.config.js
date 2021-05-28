@@ -7,6 +7,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // D:\webpack\test D:\webpack\test\webpack.config.js
 
 module.exports = {
+    mode: 'development',
+    devtool: 'inline-source-map',
     entry: {
         index: './src/index.js',
         print: './src/print.js',
@@ -16,12 +18,16 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         // 清除 dist 目录
         clean: true,
+        publicPath: '/',
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Hello',
+            title: 'Development',
             template: './src/index.html',
             // favicon: './src/favicon.ico'
         }),
     ],
+    devServer: {
+        contentBase: './dist', // 资源位置
+    },
 };
