@@ -1,4 +1,5 @@
 import _ from 'lodash'
+import $ from 'jquery'
 
 function component() {
     const element = document.createElement('div');
@@ -10,3 +11,7 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+$('body').append(`<div>Hey, I'm Coley48</div>`);
+
+console.log(1234)

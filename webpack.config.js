@@ -5,9 +5,23 @@ const path = require('path');
 // D:\webpack\test D:\webpack\test\webpack.config.js
 
 module.exports = {
-    entry: './src/index.js',
+    mode: 'development',
+    entry: {
+        index: {
+            import: './src/index.js',
+            dependOn: 'shared',
+        },
+        another: {
+            import: './src/another-module.js',
+            dependOn: 'shared',
+        },
+        shared: ['lodash', 'jquery'],
+    },
     output: {
-        filename: 'main.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
+    },
+    optimization: {
+        runtimeChunk: 'single',
     },
 };
