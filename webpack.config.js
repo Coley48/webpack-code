@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
     entry: {
         main: './src/index.js',
-        test: './src/test.js'
+        // test: './src/test.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -16,4 +16,17 @@ module.exports = {
             type: 'umd',
         },
     },
+    // 外部化依赖
+    externals: {
+        lodash: {
+            commonjs: 'lodash',
+            commonjs2: 'lodash',
+            amd: 'lodash',
+            root: '_',
+        },
+    },
 };
+
+// 发布library
+// 添加 package.json 字段，https://docs.npmjs.com/cli/v7/configuring-npm/package-json 或 https://github.com/dherman/defense-of-dot-js/blob/master/proposal.md
+// https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry
