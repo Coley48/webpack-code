@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack --env goal=local --env output=dist --env production --progress",
+    "start": "node dist/local.bundle.js"
   },
   "keywords": [],
   "author": "",
