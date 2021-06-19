@@ -5,12 +5,14 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "init": "webpack-cli init myFolder"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@webpack-cli/generators": "^2.2.0",
     "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0"
   },
