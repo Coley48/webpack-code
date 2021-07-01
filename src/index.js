@@ -1,11 +1,18 @@
-import _ from 'lodash'
+import {
+    cube
+} from './math.js';
+import "./style.css";
+// import _ from "lodash"; // 会将整个依赖引入，即使未引用
+// import join from "lodash/join"
+// console.log(join([1, 2, 3], '-'));
 
 function component() {
-    const element = document.createElement('div');
+    const element = document.createElement('pre');
 
-    // lodash（目前通过一个 script 引入）对于执行这一行是必需的
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
+    element.innerHTML = [
+        'Hello webpack!',
+        '5 computed is equal to '
+    ].join('\n\n');
     return element;
 }
 
