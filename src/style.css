@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('./WenDingXiFangSongJian-1.ttf') format('ttf'),
+        url('./WenDingXiFangSongJian-1.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+.hello {
+    color: lightcoral;
+    font-family: MyFont;
+}
+
+.hello::before {
+    content: url(./icon.png);
+}
