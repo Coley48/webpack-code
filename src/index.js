@@ -1,7 +1,8 @@
 import {
     cube
 } from './math.js';
-import "./style.css";
+import "./css/style.css";
+import "./css/custom.css";
 // import _ from "lodash"; // 会将整个依赖引入，即使未引用
 // import join from "lodash/join"
 // console.log(join([1, 2, 3], '-'));
